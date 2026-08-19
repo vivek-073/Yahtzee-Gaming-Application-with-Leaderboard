@@ -1,0 +1,460 @@
+/* Dhruv Jain 1225711344 */
+
+body {
+  background-color: #f8f6e9;
+  color: #ff555b;
+  font-family: Calibri;
+  text-align: justified;
+  height: 100%
+}
+
+h1 {
+  font-family: Calibri;
+  text-align: center;
+  position: relative;
+  padding: 20px 20px;
+}
+
+h2 {
+  font-family: Calibri;
+  text-align: center;
+  position: auto;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+#top-text {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+a {
+color: #5555ff;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3b9b42;
+}
+  
+.logo-container img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 150px;
+  text-align: center;
+  display: block;
+  padding: 20px 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+  color: #ce3138;
+}
+
+.underline-text {
+text-decoration: underline;
+font-weight: bold;
+}
+
+.remainRoll-text {
+  font-weight: bold;
+  color: #ce3138;
+}
+
+.home-buttons-container {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.header-button {
+  background-color: #ce3138;
+  color: #f8f6e9;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #3b9b42;
+}
+  
+
+#hpMeme {
+  display: flex;
+  margin: auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+}
+
+p {
+  text-align: center;
+}
+
+.yahtzee-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.message-container {
+  font-size: 20px;
+}
+
+.scoreMessage-container {
+  padding: 40px;
+  font-size: x-large;
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-slot {
+  display: inline-block;
+  margin: 15px;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #ff555b;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.yahtzee-buttons {
+  font-size: 15px;
+  background-color: #ce3138;
+  color: #f8f6e9;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.yahtzee-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button.yahtzee-buttons:disabled {
+  background-color: #a69596;
+  cursor: not-allowed;
+}
+
+.yahtzee-buttons:hover:enabled {
+  background-color: #3b9b42;
+}
+
+.kept-button {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f8f6e9;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kept-button:disabled {
+  background-color: #3b9b42;
+  cursor: not-allowed;
+}
+
+.keep-button-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.keep-button {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ce3138;
+  color: #f8f6e9;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.keep-button:hover {
+  background-color: #3b9b42;
+}
+
+.keep-button:disabled {
+  background-color: #a69596;
+  cursor: not-allowed;
+}
+
+.die-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.already-kept {
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  color: #f8f6e9;
+  background-color: #ce3138;
+  cursor: not-allowed;
+  border-radius: 10px;
+  top: 30px;
+  right: 25px;
+  position: fixed;
+  padding: 10px;
+  width: 300px;
+  animation: zoomInOut 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: zoomOutIn 0.3s ease-in-out forwards;
+}
+
+@keyframes zoomInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes zoomOutIn {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.jiggle {
+  animation: jiggle 0.5s ease-in-out forwards;
+  transform-origin: center;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.spin {
+  animation: spin 2500ms ease-in-out forwards;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--spin-degree, 360deg));
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.secondary-heading {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tertiary-heading {
+  color: #555;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+#part1and2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  height: 500px;
+  max-height: 500px;
+}
+
+#part1 {
+  flex: 2;
+  min-height: 500px;
+}
+
+#part1b {
+  color: #ce3138;
+  font-size: 30px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#part1c {
+  list-style-type: none;
+  padding: 0;
+}
+
+#part1c li {
+  font-size: small;
+  padding: 10px 20px;
+  background-color: #ce3138;
+  color: #f8f6e9;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#part2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex: 2;
+  min-height: 500px;
+}
+
+#part2-text {
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#svg-container {
+  background-color: #3b9b42;
+}
+
+#animate-button {
+  background-color: #ce3138;
+  border: none;
+  color: #f8f6e9;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#animate-button:hover {
+  background-color: #3b9b42;
+}
+
+#part3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  min-height: 500px;
+}
+
+#part3Content {
+  max-width: 500px;
+}
+
+#yearSelection {
+  color: #f8f6e9;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  appearance: none;
+  background-color: #ce3138;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  text-align: center;
+}
+
+#pie-chart-container {
+  display: inline-block;
+}
+
+.arc {
+  cursor: help;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<!-- Dhruv Jain - 1225711344 -->
+<head>
+  <title>Data Visualization</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="https://cdn.discordapp.com/attachments/1068328202877014178/1070918632311373854/materwelon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chilanka|Indie+Flower|Gloria+Hallelujah|Pacifico|Permanent+Marker&display=swap">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div class="header" style="margin-top: 150px; position: relative;">
+    <h1>Demonstration of D3 and Dynamic Webpages</h1>
+  </div>
+
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="https://cdn.discordapp.com/avatars/287135364127129601/a_1b278a2cd3e1cc9699603fff9f15d7c5.gif?size=1024" alt="Logo">
+    </a>
+  </div>
+
+  <div id="content">
+    <div id="part1and2">
+      <!-- Part 1 -->
+      <div id="part1" class="card">
+        <h2>Part 1: Demonstrate modifications of the DOM</h2>
+      
+        <h3 id="part1a-name" class="secondary-heading">Dhruv Jain</h3>
+        
+        <h4 id="part1b" class="tertiary-heading">Hello World, these are my classes:</h4>
+        
+        <ul id="part1c"></ul>
+      </div>    
+
+      <!-- Part 2 -->
+      <div id="part2" class="card">
+        <div id="part2-text">
+          <h2>Part 2: Demonstrate modifications of SVG graphics</h2>
+          <p>
+            This visualization displays a collection of shapes (circles and rectangles) moving around inside an SVG container. Each shape has a unique color, size, and position. The shapes move in random directions and bounce off the container's boundaries. As the animation progresses, the shapes slowly fade out until they become completely transparent.
+          </p>
+          <button id="animate-button">Animate! (This reloads the page)</button>
+        </div>
+        <!-- The SVG container and its contents will be created using D3.js in data.js -->
+        <svg id="svg-container" width="500" height="500"></svg>
+      </div>
+    </div>  
+
+      <!-- Part 3 -->
+      <div id="part3" class="card">
+        <div id="textBlock">
+          <h2>Part 3: Demonstrate visualization of data</h2>
+          <p id="part3Content">
+            This visualization displays the top 10 movies by worldwide box office revenue (on hover) for the selected year. Explore the most popular movies in <a href="https://www.the-numbers.com/market/2019/summary" target="_blank">2019</a>, <a href="https://www.the-numbers.com/market/2020/summary" target="_blank">2020</a>, and <a href="https://www.the-numbers.com/market/2021/summary" target="_blank">2021</a>.
+          </p>
+          <div class="dropdown-container"> <!-- Add this wrapper div -->
+            <label for="yearSelection">Choose a year:</label>
+            <select id="yearSelection" onchange="createPie()">
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+        </div>
+        <div id="pie-chart-container"></div>
+        <div id="tooltip"></div>
+      </div>
+  </div>
+  <script src="data.js"></script>
+</body>
+</html>

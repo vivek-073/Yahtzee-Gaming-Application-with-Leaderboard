@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <!-- Dhruv Jain - 1225711344-->
+  <head>
+    <title>Yahtzee Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://cdn.discordapp.com/attachments/1068328202877014178/1070918632311373854/materwelon.png"
+    />
+  </head>
+  <body style="background-color: #212121;">
+    <div class="header" style="margin-top: 140px; position: relative">
+      <h1>materwelon's Yahtzee LITE</h1>
+    </div>
+
+    <div class="logo-container">
+      <a href="index.html">
+        <img
+          src="https://cdn.discordapp.com/avatars/287135364127129601/a_1b278a2cd3e1cc9699603fff9f15d7c5.gif?size=1024"
+          alt="Logo"
+        />
+      </a>
+    </div>
+
+    <div class="yahtzee-container">
+      <div class="message-container">
+        <p id="message">
+          <span class="bold-text">How to Play</span><br />
+          <br />
+          Click <span class="underline-text">Start Game</span> below to begin
+          your game.<br /><br />
+          You have three chances total to get one of the following two sets of
+          numbers:<br />
+          ➤ 1, 2, 3, 4, 5<br />
+          ➤ 2, 3, 4, 5, 6<br />
+          <br />
+          Click <span class="underline-text">Keep?</span> to hold on to a dice
+          (for your set).<br />
+          Click <span class="underline-text">Roll Dice</span> to roll more dice
+          in available slots.<br />
+          Click <span class="underline-text">Reset Game</span> to reset the game
+          and try again.<br />
+          (These three buttons will be clickable when you play)
+        </p>
+      </div>
+
+      <div class="yahtzee-button-container">
+        <button id="start" class="yahtzee-buttons">Start Game</button>
+        <button id="roll" class="yahtzee-buttons" disabled>Roll Dice</button>
+        <button id="reset" class="yahtzee-buttons" disabled>Reset Game</button>
+      </div>
+
+      <div class="dice-container">
+        <div class="dice-slot" id="0">
+          <button class="keep-button" disabled>Keep?</button>
+          <img class="die-img" src="" alt="" />
+        </div>
+        <div class="dice-slot" id="1">
+          <button class="keep-button" disabled>Keep?</button>
+          <img class="die-img" src="" alt="" />
+        </div>
+        <div class="dice-slot" id="2">
+          <button class="keep-button" disabled>Keep?</button>
+          <img class="die-img" src="" alt="" />
+        </div>
+        <div class="dice-slot" id="3">
+          <button class="keep-button" disabled>Keep?</button>
+          <img class="die-img" src="" alt="" />
+        </div>
+        <div class="dice-slot" id="4">
+          <button class="keep-button" disabled>Keep?</button>
+          <img class="die-img" src="" alt="" />
+        </div>
+      </div>
+
+      <div class="scoreMessage-container">
+        <p id="score-message">
+          You have
+          <span class="remainRoll-text" id="rolls-remaining"></span> roll(s)
+          available.
+        </p>
+      </div>
+    </div>
+
+    <script src="yahtzee.js"></script>
+  </body>
+</html>
